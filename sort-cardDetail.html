@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>银行卡详情</title>
+<link rel="stylesheet" type="text/css" href="css/common.css">
+<link rel="stylesheet" type="text/css" href="css/layout.css">
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<meta content="telephone=no" name="format-detection" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1,user-scalable=0">
+</head>
+<body>
+<div class="topfixed">
+  <header class="header red">
+    <a href="###" class="a-back"></a>
+    <h2>银行卡详情</h2>
+  </header>
+</div>
+<div class="content" style="padding:45px 0 0;">
+  <div class="fff-box card-main">
+    <ul class="banklist">
+      <li class="clear">
+        <div class="bank_img">
+          <img src="images/zsyh-big.png">
+        </div>
+        <em>招商银行</em>
+        <span class="card-num">62 **** **** **** 00</span>
+      </li>
+    </ul>
+  </div>
+  <div class="fff-box yuyue-sel">
+    <span>立即还款</span>
+    <i class="icon-right"></i>
+  </div>
+  <div class="btn">
+    <input type="button" value="删除" class="cur" onclick="return toast();">
+  </div>
+  <div class="btn">
+    <input type="button" value="删除" class="cur" onclick="return confirm();">
+  </div>
+</div>
+<div id="bg-gray"></div>
+<div class="tishi-modal toast">
+  <p class="modal-tit">提示</p>
+  <p class="modal-con">该卡有预约记录，需取消预约后解除绑定</p>
+  <div class="modal-btn">
+    <a href="###">知道了</a>
+  </div>
+</div>
+<div class="tishi-modal confirm">
+  <p class="modal-con">删除银行卡后，将无法使用该卡进行交易，确定删除吗？</p>
+  <div class="modal-btn">
+    <a href="###" class="no">取消</a>
+    <a href="###" class="yes">确定</a>
+  </div>
+</div>
+<script src="js/jquery.min.js"></script>
+<script>
+function toast(){
+  var bggray = $("#bg-gray");
+  var modal = $(".toast");
+  bggray.css("width",window.screen.width);
+  bggray.css("height",window.screen.height);
+  bggray.show();
+  modal.show();
+}
+function confirm(){
+  var bggray = $("#bg-gray");
+  var modal = $(".confirm");
+  bggray.css("width",window.screen.width);
+  bggray.css("height",window.screen.height);
+  bggray.show();
+  modal.show();
+}
+</script>
+</body>
+</html>

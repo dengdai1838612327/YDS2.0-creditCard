@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>场景入口</title>
+<link rel="stylesheet" type="text/css" href="css/common.css">
+<link rel="stylesheet" type="text/css" href="css/layout.css">
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<meta content="telephone=no" name="format-detection" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1,user-scalable=0">
+</head>
+<body>
+<div class="topfixed">
+  <header class="header">
+    <span class="search-box"><i class="sprites"></i></span>
+    <!-- <a href="###" class="msg">
+      <i class="sprites"></i>
+    </a> -->
+    <a href="###" class="msg new">
+      <i class="sprites"></i>
+    </a>
+  </header>
+</div>
+<div class="content" style="padding:0 0 55px;">
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="images/t_banner.jpg"></div>
+      <div class="swiper-slide"><img src="images/t_banner.jpg"></div>
+      <div class="swiper-slide"><img src="images/t_banner.jpg"></div>
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+  <div class="index-category">
+    <ul class="ul-list">
+      <li> <a href="###"> <i><img src="images/1.png" width="40" height="40"></i> <span>话费</span> </a> </li>
+      <li> <a href="###"> <i><img src="images/2.png" width="40" height="40"></i> <span>流量</span> </a> </li>
+      <li> <a href="###"> <i><img src="images/3.png" width="40" height="40"></i> <span>加油卡</span> </a> </li>
+      <li> <a href="###"> <i><img src="images/4.png" width="40" height="40"></i> <span>购物商城</span> </a> </li>
+      <li> <a href="###"> <i><img src="images/5.png" width="40" height="40"></i> <span>信用卡还款</span> </a> </li>
+      <li> <a href="###"> <i><img src="images/6.png" width="40" height="40"></i> <span>影票</span> </a> </li>
+      <li> <a href="###"> <i><img src="images/7.png" width="40" height="40"></i> <span>违章缴费</span> </a> </li>
+      <li> <a href="###"> <i><img src="images/8.png" width="40" height="40"></i> <span>礼品卡</span> </a> </li>
+      <li> <a href="###"> <i><img src="images/9.png" width="40" height="40"></i> <span>代金券</span> </a> </li>
+      <li> <a href="###"> <i><img src="images/more.png" width="40" height="40"></i><span>更多</span></a> </li>
+    </ul>
+  </div>
+  <div class="notice">
+    <i class="news_img"></i>
+    <div class="t-news" id="t-news">
+      <a href="###" title="【公告】关于商城因春节假期延迟发货及其它影响的通知" target="_blank"><em>NEW</em>【公告】关于商城因春节假期延迟发货及其它影响的通知1</a>
+      <a href="###" title="【公告】关于商城因春节假期延迟发货及其它影响的通知" target="_blank"><em>NEW</em>【公告】关于商城因春节假期延迟发货及其它影响的通知2</a>
+      <a href="###" title="【公告】关于商城因春节假期延迟发货及其它影响的通知" target="_blank"><em>NEW</em>【公告】关于商城因春节假期延迟发货及其它影响的通知3</a>
+    </div>
+    <script>
+        var box = document.getElementById("t-news"), can = true;
+        box.innerHTML += box.innerHTML;
+        box.onmouseover = function () { can = false };
+        box.onmouseout = function () { can = true };
+        new function () {
+            var stop = box.scrollTop % 32 == 0 && !can;
+            if (!stop) box.scrollTop == parseInt(box.scrollHeight / 2) ? box.scrollTop = 0 : box.scrollTop++;
+            setTimeout(arguments.callee, box.scrollTop % 32 ? 10 : 2000);
+        };
+    </script>
+  </div>
+  <div class="floor floor1">
+    <p>
+      <img src="images/A11.jpg">
+      <img src="images/A12.jpg">
+    </p>
+    <p>
+      <img src="images/A12.jpg">
+      <img src="images/A11.jpg">
+    </p>
+  </div>
+  <div class="floor floor2">
+    <p><img src="images/b11.jpg"></p>
+    <p><img src="images/b11.jpg"></p>
+  </div>
+</div>
+<nav class="bar bar-tab footer">
+  <a class="tab-item tab1 cur" href="#">
+    <i class="sprites"></i>
+    <span class="tab-label">首页</span>
+  </a>
+  <a class="tab-item tab2" href="#">
+    <i class="sprites"></i>
+    <span class="tab-label">发现</span>
+  </a>
+  <a class="tab-item tab3" href="#">
+    <i class="sprites"></i>
+    <span class="tab-label">购物车</span>
+  </a>
+  <a class="tab-item tab4" href="#">
+    <i class="sprites"></i>
+    <span class="tab-label">我的</span>
+  </a>
+</nav>
+<script src="js/swiper.min.js"></script>
+<script>
+var mySwiper = new Swiper('.swiper-container',{
+pagination : '.swiper-pagination',
+uniqueNavElements :"true",
+autoplay: 2000,//可选选项，自动滑动
+})
+</script>
+</body>
+</html>
