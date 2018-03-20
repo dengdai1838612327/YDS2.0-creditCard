@@ -93,11 +93,19 @@
 	height: auto;
 }
 /*首页*/
-header .a-rt i{
-	width: 20px;
-	height: 26px;
+header .a-rt .sort-icon{
+	display: block;
+	width: 25px;
+	height: 35px;
 	margin-top: 10px;
-	background-position: -178px -21px;
+}
+header .a-rt .sort-icon i{
+	display: block;
+	width: 5px;
+	height: 5px;
+	border-radius: 5px;
+	background-color: #fff;
+	margin: 5px 0 0 20px;
 }
 .card-sel .card-msg{
 	background-color: #fff;
@@ -175,11 +183,11 @@ header .a-rt i{
 	color: #ba1600;
 }
 .add-link .add-icon{
-	width: 25px;
-	height: 25px;
-	vertical-align: middle;
+	display: inline-block;
 	margin: -3px 5px 0 0;
-	background-position: -175px -50px;
+	color: #ba1600;
+	font-size: 26px;
+	vertical-align: top;
 }
 .add-link a span{
 	display: inline-block;
@@ -236,7 +244,7 @@ header .a-rt i{
 }
 .sort-modal ul{
 	width: 140px;
-	height: 135px;
+	height: 180px;
 }
 .sort-modal ul li a{
 	display: block;
@@ -265,6 +273,9 @@ header .a-rt i{
 }
 .sort-modal .sort-3{
 	background-position: -52px bottom;
+}
+.sort-modal .sort-4{
+	background-position: -78px bottom;
 }
 /*添加信用卡*/
 .tips {
@@ -645,9 +656,10 @@ header .a-rt i{
 /*还款结果*/
 .res-box{
 	padding-top: 25px;
+	text-align: center;
 }
 .res-t{
-	margin-left: 20%;
+	display: inline-block;
 	font-size: 14px;
 }
 .res-t .res-tit{
@@ -684,6 +696,7 @@ header .a-rt i{
 	color: #999;
 	font-size: 14px;
 	padding: 3px 0;
+	text-align: left;
 }
 .res-t.cur .res-con{
 	border-left: 1px solid #999;
@@ -722,8 +735,9 @@ header .a-rt i{
 	font-size: 14px;
 }
 /*预约还款*/
-.header .a-rt.rt-link{
-	width: 70px;
+.check-box .rt-link{
+	float: right;
+	color: #999;
 }
 .yuyue-set p{
 	padding: 15px 10px;
