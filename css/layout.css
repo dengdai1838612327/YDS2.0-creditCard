@@ -122,11 +122,16 @@ header .a-rt .sort-icon i{
 	margin: 6px 15px;
 	background-position: -175px -83px;
 }
-.card-msg span{
+.card-msg .msg{
 	float: left;
+	width: 80%;
+	height: 30px;
+	overflow: hidden;
+}
+.card-msg .msg a{
+	display: block;
 	color: #666;
 	font-size: 13px;
-	width: 80%;
 	overflow: hidden;
 	overflow-wrap: normal;
 	white-space: nowrap;
@@ -849,12 +854,18 @@ header .a-rt .sort-icon i{
 .add-info-box p input{
 	width: 100%;
 }
+.res-t.block {
+    display: block;
+    margin: 0 auto;
+    width: 260px;
+}
 /*还款记录*/
 .record-tit{
 	font-size: 14px;
 	width: 100%;
 	padding-left: 15px;
 	margin-top: 10px;
+	margin-bottom:10px;
 }
 .record-box .bank-name{
 	padding: 10px 15px;
@@ -992,3 +1003,9 @@ header .a-rt .sort-icon i{
 .detail-head .head-tit.notice-head-tit{
 	font-size: 16px;
 }
+.box-r .card-input {
+    float: left;
+    margin-right: 2%;
+    width: 17%;
+}
+.tips2{ background:none;}

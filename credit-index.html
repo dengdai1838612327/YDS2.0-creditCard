@@ -22,10 +22,14 @@
 </div>
 <div class="content" style="padding:45px 0 0;">
   <div class="card-sel">
-    <p class="card-msg">
+    <div class="card-msg">
       <i class="sprites"></i>
-      <span>工商银行渠道维护通知工商银行渠道维护通知工商银行渠道维护通知工商银行渠道维护通知</span>
-    </p>
+      <div class="msg" id="t-news">
+        <a href="###">工商银行渠道维护通知工商银行渠道维护通知工商银行渠道维护通知工商银行渠道维护通知</a>
+        <a href="###">工商银行渠道维护通知工商银行渠道维护通知工商银行渠道维护通知工商银行渠道维护通知</a>
+        <a href="###">工商银行渠道维护通知工商银行渠道维护通知工商银行渠道维护通知工商银行渠道维护通知</a>
+      </div>
+    </div>
     <div class="card-box">
       <div class="box-main">
         <img src="images/bank1.png" width="45" height="45">
@@ -138,6 +142,15 @@ function sort(){
   bggray.show();
   modal.show();
 }
+var box = document.getElementById("t-news"), can = true;
+box.innerHTML += box.innerHTML;
+box.onmouseover = function () { can = false };
+box.onmouseout = function () { can = true };
+new function () {
+    var stop = box.scrollTop % 30 == 0 && !can;
+    if (!stop) box.scrollTop == parseInt(box.scrollHeight / 2) ? box.scrollTop = 0 : box.scrollTop++;
+    setTimeout(arguments.callee, box.scrollTop % 30 ? 10 : 2000);
+};
 </script>
 </body>
 </html>
