@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>首页</title>
+<link rel="stylesheet" type="text/css" href="css/common.css">
+<link rel="stylesheet" type="text/css" href="css/layout.css">
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<meta content="telephone=no" name="format-detection" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1,user-scalable=0">
+</head>
+<body>
+<div class="topfixed">
+  <header class="header red">
+    <a href="###" class="a-back"></a>
+    <h2>信用卡还款</h2>
+    <a href="###" class="a-rt" onclick="return sort();"><em class="sort-icon"><i></i><i></i><i></i></em></a>
+  </header>
+</div>
+<div class="content" style="padding:45px 0 0;">
+  <div class="card-sel">
+    <div class="card-msg">
+      <i class="sprites"></i>
+      <div class="msg" id="t-news">
+        <a href="###">工商银行渠道维护通知工商银行渠道维护通知工商银行渠道维护通知工商银行渠道维护通知</a>
+        <a href="###">工商银行渠道维护通知工商银行渠道维护通知工商银行渠道维护通知工商银行渠道维护通知</a>
+        <a href="###">工商银行渠道维护通知工商银行渠道维护通知工商银行渠道维护通知工商银行渠道维护通知</a>
+      </div>
+    </div>
+    <div class="nodata-box">
+      <img src="images/nodata-index.png" width="273" height="202">
+    </div>
+    <div class="add-link">
+      <a href="###">
+        <i class="add-icon">+</i>
+        <span>添加信用卡</span>
+      </a>
+    </div>
+  </div>
+</div>
+<script src="js/jquery.min.js"></script>
+<script>
+var box = document.getElementById("t-news"), can = true;
+box.innerHTML += box.innerHTML;
+box.onmouseover = function () { can = false };
+box.onmouseout = function () { can = true };
+new function () {
+    var stop = box.scrollTop % 30 == 0 && !can;
+    if (!stop) box.scrollTop == parseInt(box.scrollHeight / 2) ? box.scrollTop = 0 : box.scrollTop++;
+    setTimeout(arguments.callee, box.scrollTop % 30 ? 10 : 2000);
+};
+</script>
+</body>
+</html>

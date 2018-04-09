@@ -1009,3 +1009,22 @@ header .a-rt .sort-icon i{
     width: 17%;
 }
 .tips2{ background:none;}
+/*无数据*/
+.nodata-box img{
+	display: block;
+	margin: 50px auto;
+}
+.nodata-text{
+	text-align: center;
+	font-size: 15px;
+	color: #666;
+	margin-bottom: 30px;
+}
+.nodata-box .nodata-text img{
+	margin: 0 10px 0 0;
+	display: inline-block;
+	vertical-align: middle;
+}
+.nodata-text span{
+	display: inline-block;
+}
